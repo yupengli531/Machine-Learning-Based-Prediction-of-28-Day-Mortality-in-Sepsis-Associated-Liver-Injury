@@ -16,7 +16,7 @@ The proposed XGBoost-based model demonstrates strong predictive capability for e
 
 ---
 
-## 🧩 Dataset Sources
+## Dataset Sources
 
 All datasets analyzed during this study are publicly available on PhysioNet:
 - [MIMIC-IV v2.2](https://physionet.org/content/mimiciv/2.2/)
@@ -27,15 +27,20 @@ Access requires credentialed approval via the [PhysioNet Data Use Agreement](htt
 
 ---
 
-## ⚙️ Methodology Overview
+## Study Population
+- Age >= 18
+- With Sepsis (Sepsis 3.0 criteria)
+- SOFA score >=2
+- Infections
+- ICU stay >= 24 h
+- At least one occurrence of SALI
+- TBIL > 2 and INR > 1.5
+- With sepsis-related liver injury
+- Without other types of liver disease
+- Without HIV infection
+- Non-pregnant
+- With Biochemical and coagulation tests within 24 h of admission to the ICU
 
-| Step | Description |
-|------|--------------|
-| **1. Data Extraction (SQL)** | Extracted adult SALI patients (≥18 years) with ICU stay ≥24h from MIMIC-IV, MIMIC-III, and eICU. |
-| **2. Feature Selection** | 30 clinical variables, including demographics, vital signs, lab indicators, comorbidities, infection sites, interventions, clinical measurements, and severity scores, were used. |
-| **3. Model Training** | Applied eight ML algorithms with 5-fold cross-validation. |
-| **4. Model Evaluation** | Evaluated using AUROC, accuracy, precision, recall, F1, and specificity. |
-| **5. Interpretability** | Conducted SHAP (global) and LIME (local) analyses for clinical transparency. |
 
 ---
 
