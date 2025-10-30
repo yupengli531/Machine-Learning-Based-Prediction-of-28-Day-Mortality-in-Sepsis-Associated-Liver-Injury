@@ -28,6 +28,7 @@ Access requires credentialed approval via the [PhysioNet Data Use Agreement](htt
 ---
 
 ## Study Population
+Criteria:
 - Age >= 18
 - With Sepsis (Sepsis 3.0 criteria)
 - SOFA score >=2
@@ -41,6 +42,7 @@ Access requires credentialed approval via the [PhysioNet Data Use Agreement](htt
 - Non-pregnant
 - With Biochemical and coagulation tests within 24 h of admission to the ICU
 
+![Study Population](https://github.com/yupengli531/Machine-Learning-Based-Prediction-of-28-Day-Mortality-in-Sepsis-Associated-Liver-Injury/blob/71100009449bbca4d77cb6207ff9525bcc1950ec/Study%20Population.png)
 
 ---
 
