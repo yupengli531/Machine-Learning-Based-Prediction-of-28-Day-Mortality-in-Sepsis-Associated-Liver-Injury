@@ -53,7 +53,7 @@ Diagnoses were identified using the **International Classification of Diseases, 
 
 A total of **68 clinical features** were initially extracted from MIMIC-IV and organized into **eight categories**:
 
-![Overview of Selected Variables]()
+![Overview of Selected Variables](https://github.com/yupengli531/Machine-Learning-Based-Prediction-of-28-Day-Mortality-in-Sepsis-Associated-Liver-Injury/blob/2e835e2f7afc7fad44a18da05c48501154e576fd/Overview%20of%20Selected%20Variables.png)
 
 Both **minimum and maximum** values of vital signs and laboratory results were computed to capture physiological fluctuations during the initial 24 hours of ICU stay.
 
@@ -71,7 +71,7 @@ A total of **103 extracted features** were initially included, and **88 remained
 
 Key preprocessing steps included:
 
-- **Missing Data Handling:** Median imputation for remaining missing values (<20%).  
+- **Missing Data Handling:** Median imputation for remaining missing values.  
 - **Outlier Treatment:** Winsorization (1st–99th percentile capping).  
 - **Normalization:** Log transformation for highly skewed variables.  
 - **Multicollinearity Control:** Features with **VIF > 20** were removed.  
@@ -94,9 +94,9 @@ PFI quantified the decrease in model performance after shuffling each feature, p
 
 The **top 30 features** were retained for final modeling—key variables.
 
-![top 30 features]()
+![top 30 features](https://github.com/yupengli531/Machine-Learning-Based-Prediction-of-28-Day-Mortality-in-Sepsis-Associated-Liver-Injury/blob/2e835e2f7afc7fad44a18da05c48501154e576fd/30%20selected%20features%20with%20mean%20importance.png)
 
-![heatmap]()
+![heatmap](https://github.com/yupengli531/Machine-Learning-Based-Prediction-of-28-Day-Mortality-in-Sepsis-Associated-Liver-Injury/blob/2e835e2f7afc7fad44a18da05c48501154e576fd/correlation%20heatmap.png)
 
 ---
 
@@ -104,26 +104,27 @@ The **top 30 features** were retained for final modeling—key variables.
 Eight machine learning models were developed and compared:
 - **Logistic Regression**
 - **Elastic-Net Logistic Regression (cv-glmnet)**
-- **Decision Tree**, **Random Forest**
+- **Decision Tree**
+- **Random Forest**
 - **Support Vector Machine (SVM)**
 - **Extreme Gradient Boosting (XGBoost)**
 - **k-Nearest Neighbors (KNN)**
 - **Linear Discriminant Analysis (LDA)**
 
 Internal Validation (MIMIC-IV):
-- **Best Model**: XGBoost: AUROC **0.8556** (95% CI: 0.807-0.898)
+- **Best Model**: XGBoost: AUROC of **0.8556** (95% CI: 0.807-0.898)
 
-![roc curves 1]()
+![roc curves 1](https://github.com/yupengli531/Machine-Learning-Based-Prediction-of-28-Day-Mortality-in-Sepsis-Associated-Liver-Injury/blob/2e835e2f7afc7fad44a18da05c48501154e576fd/mimic-iv%20roc%20curves.png)
 
 External Validation (MIMIC-III):
-- **Best Model**: Random Forest: AUROC **0.8964** (95% CI: 0.845-0.943)
+- **Best Model**: Random Forest: AUROC of **0.8964** (95% CI: 0.845-0.943)
 
-![roc curves 2]()
+![roc curves 2](https://github.com/yupengli531/Machine-Learning-Based-Prediction-of-28-Day-Mortality-in-Sepsis-Associated-Liver-Injury/blob/2e835e2f7afc7fad44a18da05c48501154e576fd/mimic-iii%20roc%20curves.png)
 
 External Validation (eICU-CRD):
-- **Best Model**: XGBoost: AUROC **0.6966** (95% CI: 0.594-0.790)
+- **Best Model**: XGBoost: AUROC of **0.6966** (95% CI: 0.594-0.790)
 
-![roc curves 3]()
+![roc curves 3](https://github.com/yupengli531/Machine-Learning-Based-Prediction-of-28-Day-Mortality-in-Sepsis-Associated-Liver-Injury/blob/2e835e2f7afc7fad44a18da05c48501154e576fd/eicu%20roc%20curves.png)
 
 ---
 
@@ -137,13 +138,13 @@ External Validation (eICU-CRD):
     - *Heart Rate*
     - *DiaBP*
 
-![shap]()
+![shap](https://github.com/yupengli531/Machine-Learning-Based-Prediction-of-28-Day-Mortality-in-Sepsis-Associated-Liver-Injury/blob/2e835e2f7afc7fad44a18da05c48501154e576fd/shap%20value.png)
 
 - **LIME Analysis:** Provided case-level interpretability for individual mortality predictions.  
   - Green bars → increased mortality risk  
   - Red bars → protective features
 
-![lime]()
+![lime](https://github.com/yupengli531/Machine-Learning-Based-Prediction-of-28-Day-Mortality-in-Sepsis-Associated-Liver-Injury/blob/2e835e2f7afc7fad44a18da05c48501154e576fd/lime.png)
 
 ---
 
